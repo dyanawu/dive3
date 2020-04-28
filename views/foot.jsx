@@ -5,7 +5,10 @@ class Foot extends React.Component {
   render() {
     return (
       <footer className="footer mt-auto bg-info text-right">
-        <p className="px-3 py-2 m-0 text-white">(c) dyanawu 2020</p>
+        <p className="h6 pr-4 py-3 my-auto text-white">
+          marine visit chronicler&nbsp;
+          <a className="badge badge-light text-info" href="https://github.com/dyanawu/" target="_blank">dyanawu <i class="fab fa-github"></i></a>
+        </p>
       </footer>
     );
   }

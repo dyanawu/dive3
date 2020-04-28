@@ -18,8 +18,11 @@ class Head extends React.Component {
     return (
       <React.Fragment>
 
-        <span className="h3 my-3 pl-3">Marine Visit Chronicler</span>
-        <span className="my-auto pr-3">
+        <span className="h3 my-3 pl-4">Dive&nbsp;
+          <i class="fas fa-fish"></i>&nbsp;
+          <i class="fas fa-water"></i>
+        </span>
+        <span className="my-auto pr-4">
           {login}
         </span>
 

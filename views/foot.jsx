@@ -7,7 +7,7 @@ class Foot extends React.Component {
       <footer className="footer mt-auto bg-info text-right">
         <p className="h6 pr-4 py-3 my-auto text-white">
           marine visit chronicler&nbsp;
-          <a className="badge badge-light text-info" href="https://github.com/dyanawu/" target="_blank">dyanawu <i class="fab fa-github"></i></a>
+          <a className="badge badge-light text-info" href="https://github.com/dyanawu/" target="_blank">dyanawu <i className="fab fa-github"></i></a>
         </p>
       </footer>
     );

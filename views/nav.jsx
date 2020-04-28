@@ -4,9 +4,9 @@ class Nav extends React.Component {
 
   render() {
     return (
-      <nav class="nav flex-column">
-        <a class="nav-link btn btn-outline-info text-info mb-3" href="/trips">Trips</a>
-        <a class="nav-link btn btn-outline-info text-info mb-3" href="/dives">Dives</a>
+      <nav className="nav flex-column">
+        <a className="nav-link btn btn-outline-info text-info mb-3" href="/trips">Trips</a>
+        <a className="nav-link btn btn-outline-info text-info mb-3" href="/dives">Dives</a>
       </nav>
     );
   }

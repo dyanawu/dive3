@@ -6,21 +6,21 @@ class Head extends React.Component {
     let login =
       <a href="/login"
          className="btn btn-light text-info">
-        Log In <i class="fas fa-sign-in-alt"></i>
+        Log In <i className="fas fa-sign-in-alt"></i>
       </a>;
 
     let logout =
       <a href="/login"
          className="btn btn-light text-info">
-        Log Out <i class="fas fa-sign-out-alt"></i>
+        Log Out <i className="fas fa-sign-out-alt"></i>
       </a>;
 
     return (
       <React.Fragment>
 
         <span className="h3 my-3 pl-4">Dive&nbsp;
-          <i class="fas fa-fish"></i>&nbsp;
-          <i class="fas fa-water"></i>
+          <i className="fas fa-fish"></i>&nbsp;
+          <i className="fas fa-water"></i>
         </span>
         <span className="my-auto pr-4">
           {login}

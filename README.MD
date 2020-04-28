@@ -35,6 +35,3 @@ so that
 Access online at http://dive3.herokuapp.com/
 
 ## Unsolved
-
-## Credits
-https://www.glyphicons.com/ - class-applied icons for boostrap

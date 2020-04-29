@@ -8,17 +8,17 @@ class TripForm extends AuthContent {
   }
 
   showContent() {
-    console.log("destinations -- ", this.props.destinations);
-    console.log("operators -- ", this.props.operators);
-
     let countries = this.props.countries.map(country => {
-      return <option>{country.name}</option>
+      let key = `country-${country.id}`;
+      return <option key={key}>{country.name}</option>
     });
     let destinations = this.props.destinations.map(destination => {
-      return <option>{destination.name}</option>
+      let key = `destination-${destination.id}`;
+      return <option key={key}>{destination.name}</option>
     });
     let operators = this.props.operators.map(operator => {
-      return <option>{operator.name}</option>
+      let key = `operator-${operator.id}`;
+      return <option key={key}>{operator.name}</option>
     });
 
     return (

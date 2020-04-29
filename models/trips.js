@@ -11,16 +11,18 @@ module.exports = class Trip {
     this.operator = operator;
   }
 
-  static async getAll() {
+  static async getTrips() {
     let query =
-        'SELECT (trips.name, trips.start, destinations.name, countries.name, operators.name) ' +
+        'SELECT trips.id, trips.name, trips.start, destinations.name AS destination, countries.name AS country, operators.name AS operator ' +
         'FROM trips ' +
         'INNER JOIN destinations ' +
         'ON (trips.destination_id = destinations.id) ' +
         'INNER JOIN operators ' +
         'ON (trips.operator_id = operators.id) ' +
         'INNER JOIN countries ' +
-        'ON (destinations.country_id = countries.id)';
+        'ON (destinations.country_id = countries.id) ' +
+        'ORDER BY trips.start DESC';
     return await dbpool.query(query);
   }
+
 };

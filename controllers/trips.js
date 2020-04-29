@@ -7,8 +7,9 @@ const Destination = require('../models/destinations');
 const Operator = require('../models/operators');
 
 const list = async (req, res) => {
-  let trips = await Trip.getAll();
-  res.send(trips.rows);
+  let trips = await Trip.getTrips();
+  res.locals.trips = trips.rows;
+  res.render('triplist');
 };
 
 const showForm = async (req, res) => {

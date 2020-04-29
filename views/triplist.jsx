@@ -31,7 +31,7 @@ class TripList extends AuthContent {
     });
     return (
       <>
-        <div className="row pt-3">
+        <div className="row">
           <div className="col">
             <a href="/trip/new/"
                className="btn btn-outline-info btn-block">

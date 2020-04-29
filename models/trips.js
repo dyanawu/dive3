@@ -13,7 +13,10 @@ module.exports = class Trip {
 
   static async getTrips() {
     let query =
-        'SELECT trips.id, trips.name, trips.start, destinations.name AS destination, countries.name AS country, operators.name AS operator ' +
+        'SELECT ' +
+        'trips.id, trips.name, trips.start, ' +
+        'destinations.name AS destination, countries.name AS country, ' +
+        'operators.name AS operator ' +
         'FROM trips ' +
         'INNER JOIN destinations ' +
         'ON (trips.destination_id = destinations.id) ' +

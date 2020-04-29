@@ -14,6 +14,10 @@ class Template extends React.Component {
         <head>
           <link rel="stylesheet" href="/css/bootstrap.min.css" />
           <link rel="stylesheet" href="/css/fontawesome/css/all.min.css" />
+          <link rel="stylesheet" href="/css/bootstrap-datepicker.min.css" />
+          <script src="/script/jquery-3.0.0.min.js"></script>
+          <script src="/script/bootstrap.bundle.min.js"></script>
+          <script src="/script/bootstrap-datepicker.min.js"></script>
           <title>{this.title}</title>
         </head>
 
@@ -32,8 +36,6 @@ class Template extends React.Component {
 
           <Foot />
 
-          <script src="/script/jquery-3.0.0.min.js"></script>
-          <script src="/script/bootstrap.bundle.min.js"></script>
         </body>
       </html>
     );

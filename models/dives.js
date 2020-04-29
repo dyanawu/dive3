@@ -18,7 +18,7 @@ module.exports = class Dive {
 
   static async getDivesByTrip(trip_id) {
     let query =
-        'SELECT dives.*, trips.name as tripname FROM dives ' +
+        'SELECT * FROM dives ' +
         'INNER JOIN trips ' +
         'ON (dives.trip_id = trips.id) ' +
         'WHERE dives.trip_id = $1 ' +

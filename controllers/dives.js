@@ -2,6 +2,7 @@
 // contains functions that a route will call
 
 const Dives = require('../models/dives');
+const Trips = require('../models/trips');
 
 const listDives = async (req, res) => {
   let results = await Dives.getAllDives();
@@ -9,8 +10,10 @@ const listDives = async (req, res) => {
 };
 
 const listDivesByTrip = async (req, res) => {
+  let tripName = await Trips.getTripName(req.params.id);
   let results = await Dives.getDivesByTrip(req.params.id);
   res.locals.dives = results.rows;
+  res.locals.tripname = tripName;
   res.render('tripdivelist');
 };
 

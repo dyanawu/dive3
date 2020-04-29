@@ -9,7 +9,6 @@ class TripList extends AuthContent {
 
   showContent() {
     let tripData = this.props.trips;
-    console.log(tripData);
     const dateOpts = {
       day: 'numeric',
       month: 'short',
@@ -32,23 +31,36 @@ class TripList extends AuthContent {
       );
     });
     return (
-      <div className="my-3"
-           style={{overflowY: "scroll", maxHeight: "80vh"}}>
-        <table className="table table-hover">
-          <thead className="bg-info text-white">
-            <tr>
-              <th scope="col">Trip</th>
-              <th scope="col">Trip Start Date</th>
-              <th scope="col">Destination</th>
-              <th scope="col">Country</th>
-              <th scope="col">Operator</th>
-            </tr>
-          </thead>
-          <tbody>
-            {trips}
-          </tbody>
-        </table>
-      </div>
+      <>
+        <div className="row my-3">
+          <div className="col">
+            <a href="/trip/new/"
+               className="btn btn-outline-info btn-block">
+              <span className="h5">Add New Trip</span>
+            </a>
+          </div>
+        </div>
+
+        <div className="row my-3"
+             style={{overflowY: "scroll", maxHeight: "80vh"}}>
+          <div className="col">
+            <table className="table table-hover">
+              <thead className="bg-info text-white">
+                <tr>
+                  <th scope="col">Trip</th>
+                  <th scope="col">Trip Start Date</th>
+                  <th scope="col">Destination</th>
+                  <th scope="col">Country</th>
+                  <th scope="col">Operator</th>
+                </tr>
+              </thead>
+              <tbody>
+                {trips}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </>
     );
   }
 }

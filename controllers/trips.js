@@ -6,7 +6,7 @@ const Country = require('../models/countries');
 const Destination = require('../models/destinations');
 const Operator = require('../models/operators');
 
-const list = async (req, res) => {
+const listTrips = async (req, res) => {
   let trips = await Trip.getTrips();
   res.locals.trips = trips.rows;
   res.render('triplist');
@@ -31,7 +31,7 @@ const add = async (req, res) => {
 };
 
 module.exports = {
-  list,
+  listTrips,
   showForm,
   add
 };

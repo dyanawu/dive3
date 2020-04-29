@@ -32,8 +32,8 @@ CREATE TABLE dives (
   trip_id INTEGER REFERENCES trips (id) ON DELETE CASCADE,
   dive_no VARCHAR(20),
   site VARCHAR(50),
-  time_in TIMESTAMP,
-  time_out TIMESTAMP,
+  time_in TIMESTAMPTZ,
+  time_out TIMESTAMPTZ,
   max_depth REAL NOT NULL DEFAULT 0.0,
   avg_depth REAL NOT NULL DEFAULT 0.0,
   notes VARCHAR(2000)

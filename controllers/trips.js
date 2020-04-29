@@ -11,7 +11,7 @@ const list = async (req, res) => {
   res.send(trips.rows);
 };
 
-const add = async (req, res) => {
+const showForm = async (req, res) => {
   const results = await Promise.all([
     Country.getAll(),
     Destination.getAll(),
@@ -25,7 +25,12 @@ const add = async (req, res) => {
   res.render('tripform');
 };
 
+const add = async (req, res) => {
+  res.send(req.body);
+};
+
 module.exports = {
   list,
+  showForm,
   add
 };

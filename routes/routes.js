@@ -10,7 +10,9 @@ router.get('/', (req, res) => {
 
 router.get('/trips', Trips.list);
 
-router.get('/trip/new', Trips.add);
+router.get('/trip/new', Trips.showForm);
+
+router.post('/trip/new', Trips.add);
 
 router.get('/login', (req, res) => {
   res.render('login');

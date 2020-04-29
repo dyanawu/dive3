@@ -8,7 +8,6 @@ class Content extends AuthContent {
 
   showContent() {
     return (
-      <h1>BANANANANANA</h1>
     );
   }
 }

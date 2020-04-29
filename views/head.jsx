@@ -20,10 +20,13 @@ class Head extends React.Component {
     return (
       <React.Fragment>
 
-        <span className="h3 my-3 pl-4">Dive&nbsp;
-          <i className="fas fa-fish"></i>&nbsp;
-          <i className="fas fa-water"></i>
-        </span>
+        <a href="/" className="btn btn-lg my-auto ml-2 text-white">
+          <span className="h2">
+            Dive&nbsp;
+            <i className="fas fa-fish"></i>&nbsp;
+            <i className="fas fa-water"></i>
+          </span>
+        </a>
         <span className="my-auto pr-4">
           {placeholder}
         </span>

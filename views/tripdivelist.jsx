@@ -21,11 +21,12 @@ class TripDiveList extends AuthContent {
     };
 
     let diveCards = dives.map(dive => {
+      dive.notes = dive.notes || "No notes taken.";
       return (
-        <div className="col-sm-4 mb-3 px-1">
+        <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-3 px-1">
           <div className="card border-info text-monospace">
             <div className="card-header text-white bg-info d-flex justify-content-around align-content-center">
-              <h4 className="mb-0">#{dive.dive_no} {dive.site}</h4>
+              <h4 className="mb-0">#{dive.dive_no} @ {dive.site}</h4>
             </div>
             <div className="card-body">
               <div className="text-secondary">

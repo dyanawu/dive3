@@ -14,5 +14,5 @@ module.exports = class Operator {
         'FROM operators ' +
         'ORDER BY name';
     return await dbPool.query(query);
-  };
+  }
 };

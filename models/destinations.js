@@ -15,5 +15,5 @@ module.exports = class Destination {
         'FROM destinations ' +
         'ORDER BY name';
     return await dbPool.query(query);
-  };
+  }
 };

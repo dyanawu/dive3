@@ -14,5 +14,9 @@ module.exports = class Country {
         'FROM countries ' +
         'ORDER BY name';
     return await dbPool.query(query);
-  };
+  }
+
+  async getOrCreate(name) {
+    
+  }
 };

@@ -33,7 +33,6 @@ module.exports = class Trip {
     let value = [id];
 
     let result = await dbPool.query(query, value);
-    console.log(result);
     return result.rows[0].name;
   }
 

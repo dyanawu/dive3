@@ -13,7 +13,7 @@ router.get('/trips', Trips.listTrips);
 
 router.get('/trip/new', Trips.showForm);
 
-router.post('/trip/new', Trips.add);
+router.post('/trip/new', Trips.addTrip);
 
 router.get('/trip/:id', Dives.listDivesByTrip);
 

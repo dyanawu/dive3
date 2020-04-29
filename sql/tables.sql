@@ -5,17 +5,17 @@ DROP TABLE IF EXISTS countries, operators;
 
 CREATE TABLE operators (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(50)
+  name VARCHAR(50) UNIQUE
 );
 
 CREATE TABLE countries (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(50)
+  name VARCHAR(50) UNIQUE
 );
 
 CREATE TABLE destinations (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(100),
+  name VARCHAR(100) UNIQUE,
   country_id INTEGER REFERENCES countries (id)
 );
 

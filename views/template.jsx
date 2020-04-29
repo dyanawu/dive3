@@ -5,6 +5,7 @@ const Foot = require('./foot');
 class Template extends React.Component {
   constructor (props) {
     super(props);
+    this.title = props.title || "Page";
   }
 
   render() {
@@ -13,7 +14,7 @@ class Template extends React.Component {
         <head>
           <link rel="stylesheet" href="/css/bootstrap.min.css" />
           <link rel="stylesheet" href="/css/fontawesome/css/all.min.css" />
-          <title>Page</title>
+          <title>{this.title}</title>
         </head>
 
         <body className="d-flex flex-column h-100">

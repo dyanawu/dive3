@@ -15,6 +15,8 @@ class Head extends React.Component {
         Log Out <i className="fas fa-sign-out-alt"></i>
       </a>;
 
+    let placeholder = "";
+
     return (
       <React.Fragment>
 
@@ -23,7 +25,7 @@ class Head extends React.Component {
           <i className="fas fa-water"></i>
         </span>
         <span className="my-auto pr-4">
-          {login}
+          {placeholder}
         </span>
 
       </React.Fragment>

@@ -24,13 +24,14 @@ class TripDiveList extends AuthContent {
       return (
         <div className="col-sm-4 mb-3 px-1">
           <div className="card border-info text-monospace">
-            <div className="card-header text-white bg-info"># {dive.dive_no}</div>
+            <div className="card-header text-white bg-info d-flex justify-content-around align-content-center">
+              <h4 className="mb-0">#{dive.dive_no} {dive.site}</h4>
+            </div>
             <div className="card-body">
-              <h5 className="card-title text-info">Site: {dive.site}</h5>
               <div className="text-secondary">
               <span>Date: {dive.time_in.toLocaleDateString(undefined, dateOpts)}</span><br />
-              <span>Time in: {dive.time_in.toLocaleTimeString(undefined, timeOpts)}</span><br />
-              <span>Time out: {dive.time_out.toLocaleTimeString(undefined, timeOpts)}</span><br />
+              <span>Time in: {dive.time_in.toLocaleTimeString(undefined, timeOpts)}hrs</span><br />
+              <span>Time out: {dive.time_out.toLocaleTimeString(undefined, timeOpts)}hrs</span><br />
               <span>Max. depth: {dive.max_depth}m</span><br />
               <span>Avg. depth: {dive.avg_depth}m</span><br /><br />
               </div>

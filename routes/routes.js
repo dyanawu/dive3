@@ -6,7 +6,7 @@ const Trips = require('../controllers/trips');
 const Dives = require('../controllers/dives');
 
 router.get('/', (req, res) => {
-  res.render('content');
+  res.render('home');
 });
 
 router.get('/trips', Trips.listTrips);

@@ -2,7 +2,7 @@
 // contains db queries and functions that a controller will call
 const dbpool = require('../db.js');
 
-module.exports = class Thing {
+module.exports = class Trip {
   constructor (content, user_id) {
     this.content = content;
     this.user_id = user_id;
@@ -11,7 +11,7 @@ module.exports = class Thing {
   static async getAll() {
     let query =
         'SELECT * ' +
-        'FROM test_table';
+        'FROM trips';
     return await dbpool.query(query);
   }
 };

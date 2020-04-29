@@ -26,12 +26,33 @@ const showForm = async (req, res) => {
   res.render('tripform');
 };
 
-const add = async (req, res) => {
-  res.send(req.body);
+const addTrip = async (req, res) => {
+  let tripStart = new Date(req.body.start);
+  let country = new Country(req.body.country);
+  let countryId = await country.getOrCreate();
+  let destination = new Destination(req.body.destination, countryId);
+  let destinationId = await destination.getOrCreate();
+  let operator = new Operator(req.body.operator);
+  let operatorId = await operator.getOrCreate();
+
+  const newTrip = new Trip({
+    name: req.body.name,
+    start: tripStart,
+    operator: operatorId,
+    destination: destinationId
+  });
+
+  try {
+    let newTripId = await newTrip.insertTrip();
+    res.redirect(`/trip/${newTripId.rows[0].id}`);
+  } catch(err) {
+    console.log(err);
+    res.redirect('/trip/new');
+  }
 };
 
 module.exports = {
   listTrips,
   showForm,
-  add
+  addTrip
 };

@@ -4,7 +4,7 @@ const AuthContent = require('./authcontent');
 class TripDiveList extends AuthContent {
   constructor (props) {
     super(props);
-    this.title = `Trip: ${props.dives[0].tripname}`;
+    this.title = `Trip: ${this.props.tripname}`;
   }
 
   showContent() {
@@ -55,7 +55,7 @@ class TripDiveList extends AuthContent {
         </div>
 
         <div className="row my-3 px-3"
-             style={{overflowY: "scroll", maxHeight: "77vh"}}>
+             style={{overflowY: "scroll", maxHeight: "60vh"}}>
           {diveCards}
         </div>
       </>

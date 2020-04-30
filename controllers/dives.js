@@ -6,7 +6,8 @@ const Trips = require('../models/trips');
 
 const listDives = async (req, res) => {
   let results = await Dives.getAllDives();
-  res.send(results.rows);
+  res.locals.dives = results.rows;
+  res.render('divelist');
 };
 
 const listDivesByTrip = async (req, res) => {

@@ -21,7 +21,7 @@ class TripList extends AuthContent {
       return (
         <tr key={key} className="text-info">
           <td>
-            <a href={link} className="text-info">{trip.name}</a>
+            <a href={link} className="link-info">{trip.name}</a>
           </td>
           <td>{trip.start.toLocaleDateString(undefined, dateOpts)}</td>
           <td>{trip.destination}, {trip.country}</td>
@@ -29,9 +29,10 @@ class TripList extends AuthContent {
         </tr>
       );
     });
+
     return (
       <>
-        <div className="row">
+        <div className="row" key="button">
           <div className="col">
             <a href="/trip/new/"
                className="btn btn-outline-info btn-block">
@@ -41,7 +42,7 @@ class TripList extends AuthContent {
         </div>
 
         <div className="row my-3"
-             style={{overflowY: "scroll", maxHeight: "60vh"}}>
+             style={{overflowY: "scroll", maxHeight: "60vh"}} key="table">
           <div className="col">
             <table className="table table-hover">
               <thead className="bg-info text-white">

@@ -37,7 +37,6 @@ module.exports = class Trip {
   }
 
   async insertTrip() {
-    console.log("adding trip", this);
     let values = [
       this.name,
       this.start,

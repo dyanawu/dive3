@@ -41,8 +41,8 @@ class TripList extends AuthContent {
           </div>
         </div>
 
-        <div className="row my-3"
-             style={{overflowY: "scroll", maxHeight: "60vh"}} key="table">
+        <div className="resizethis row my-3"
+             style={{overflowY: "scroll", maxHeight: "82vh"}} key="table">
           <div className="col">
             <table className="table table-hover">
               <thead className="bg-info text-white">

@@ -47,7 +47,7 @@ class TripDiveList extends AuthContent {
 
     return (
       <>
-        <div className="row my-3">
+        <div className="row">
           <div className="col">
             <a href="/dive/new/"
                className="btn btn-outline-info btn-block">
@@ -56,8 +56,8 @@ class TripDiveList extends AuthContent {
           </div>
         </div>
 
-        <div className="row my-3 px-3"
-             style={{overflowY: "scroll", maxHeight: "60vh"}}>
+        <div className="row my-3 px-3 resizethis"
+             style={{overflowY: "scroll", maxHeight: "82vh"}}>
           {diveCards}
         </div>
       </>

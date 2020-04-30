@@ -26,6 +26,7 @@ class DiveList extends AuthContent {
             <a href={diveLink}>{dive.dive_no}</a>
           </td>
           <td>{dive.time_in.toLocaleDateString(undefined, dateOpts)}</td>
+          <td>{dive.site}</td>
           <td><a href={tripLink}>{dive.name}</a></td>
         </tr>
       );
@@ -42,14 +43,15 @@ class DiveList extends AuthContent {
           </div>
         </div>
 
-        <div className="row my-3"
-             style={{overflowY: "scroll", maxHeight: "60vh"}} key="table">
+        <div className="row my-3 resizethis" key="table"
+             style={{overflowY: "scroll", maxHeight: "82vh"}}>
           <div className="col">
             <table className="table table-hover">
               <thead className="bg-info text-white">
                 <tr>
                   <th scope="col">Dive #</th>
                   <th scope="col">Date</th>
+                  <th scope="col">Site</th>
                   <th scope="col">Trip</th>
                 </tr>
               </thead>

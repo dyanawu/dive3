@@ -1,6 +1,7 @@
 # DIVE DIVE DIVE (dive3) - a dive log
 
 ## Technologies
+
 ## Approach
 
 ### User stories
@@ -35,3 +36,7 @@ so that
 Access online at http://dive3.herokuapp.com/
 
 ## Unsolved
+
+## Credits
+
+Smali Kazmi for [detect-mobile-browser](https://github.com/smali-kazmi/detect-mobile-browser): script for detecting access from a mobile device.

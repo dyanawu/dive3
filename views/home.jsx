@@ -4,7 +4,7 @@ const AuthContent = require('./authcontent');
 class Home extends AuthContent {
   constructor (props) {
     super(props);
-    this.title = "Dive dive dive! A Marine View Chronicler"
+    this.title = "Dive dive dive! A Marine Visit Chronicler"
   }
 
   showContent() {

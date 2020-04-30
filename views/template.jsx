@@ -19,6 +19,8 @@ class Template extends React.Component {
           <script src="/script/jquery-3.0.0.min.js"></script>
           <script src="/script/bootstrap.bundle.min.js"></script>
           <script src="/script/bootstrap-datepicker.min.js"></script>
+          <script src="/script/detect-browser.js"></script>
+          <script src="/script/script.js"></script>
           <title>{this.title}</title>
         </head>
 

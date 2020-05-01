@@ -29,7 +29,7 @@ class TripForm extends AuthContent {
           <div className="row">
             <div className="col-sm-12 col-md-8 offset-md-2">
 
-              <form action="/trip/new" method="POST">
+              <form method="POST">
 
                 <div className="form-row">
                   <div className="form-group col">

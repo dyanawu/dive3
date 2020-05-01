@@ -23,7 +23,7 @@ module.exports = class Trip {
         'ON (trips.operator_id = operators.id) ' +
         'INNER JOIN countries ' +
         'ON (destinations.country_id = countries.id) ' +
-        'ORDER BY trips.start DESC';
+        'ORDER BY trips.start DESC, trips.id DESC';
     return await dbPool.query(query);
   }
 

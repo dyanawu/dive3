@@ -5,11 +5,21 @@ const Trip = require('../models/trips');
 const Country = require('../models/countries');
 const Destination = require('../models/destinations');
 const Operator = require('../models/operators');
+const Dives = require('../models/dives');
 
 const listTrips = async (req, res) => {
   let trips = await Trip.getTrips();
   res.locals.trips = trips.rows;
   res.render('triplist');
+};
+
+const listTripDives = async (req, res) => {
+  let tripName = await Trip.getTripName(req.params.tripid);
+  let results = await Dives.getDivesByTrip(req.params.tripid);
+  res.locals.tripid = req.params.tripid;
+  res.locals.dives = results.rows;
+  res.locals.tripname = tripName;
+  res.render('tripdivelist');
 };
 
 const showForm = async (req, res) => {
@@ -53,6 +63,7 @@ const addTrip = async (req, res) => {
 
 module.exports = {
   listTrips,
+  listTripDives,
   showForm,
   addTrip
 };

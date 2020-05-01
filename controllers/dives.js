@@ -10,20 +10,20 @@ const listDives = async (req, res) => {
   res.render('divelist');
 };
 
-const listDivesByTrip = async (req, res) => {
-  let tripName = await Trips.getTripName(req.params.id);
-  let results = await Dives.getDivesByTrip(req.params.id);
-  res.locals.dives = results.rows;
-  res.locals.tripname = tripName;
-  res.render('tripdivelist');
-};
+const showForm = async (req, res) => {
+  if (req.params.diveid) {
+    console.log("get by dive id");
+  } else if (req.params.tripid) {
+    console.log("adding dive to trip");
+  }
 
-const add = async (req, res) => {
-  res.send(req.body);
+  let lastDiveNo = await Dives.getLastDiveNo();
+  let data = {
+  };
+  res.render('diveform', data);
 };
 
 module.exports = {
   listDives,
-  listDivesByTrip,
-  add
+  showForm
 };

@@ -17,14 +17,11 @@ class DiveList extends AuthContent {
 
     let dives = diveData.map(dive => {
       let key = `dive-${dive.id}`;
-      let diveLink = `/dive/${dive.id}`;
       let tripLink = `trip/${dive.trip_id}`;
 
       return (
         <tr key={key} className="text-info">
-          <td>
-            <a href={diveLink}>{dive.dive_no}</a>
-          </td>
+          <td>{dive.dive_no}</td>
           <td>{dive.time_in.toLocaleDateString(undefined, dateOpts)}</td>
           <td>{dive.site}</td>
           <td><a href={tripLink}>{dive.name}</a></td>

@@ -27,6 +27,14 @@ module.exports = class Trip {
     return await dbPool.query(query);
   }
 
+  static async getTripNames() {
+    let query =
+        'SELECT id, name, start ' +
+        'FROM trips ' +
+        'ORDER BY start DESC, id DESC';
+    return await dbPool.query(query);
+  }
+
   static async getTripName(id) {
     let query =
         'SELECT name FROM trips WHERE id = $1';

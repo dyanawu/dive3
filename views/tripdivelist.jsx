@@ -23,9 +23,11 @@ class TripDiveList extends AuthContent {
 
     let diveCards = dives.map(dive => {
       dive.notes = dive.notes || "No notes taken.";
+      let img_url = `https://res.cloudinary.com/dyanawu/image/upload/${dive.img_pubid}`
       return (
         <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-3 px-1">
           <div className="card border-info text-monospace">
+            <img src={img_url} class="card-img-top" alt="a photo from this dive" />
             <div className="card-header text-white bg-info d-flex justify-content-around align-content-center">
               <h4 className="mb-0">#{dive.dive_no} @ {dive.site}</h4>
             </div>

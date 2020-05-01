@@ -41,7 +41,8 @@ const addDive = async (req, res) => {
     time_out: timeOut,
     max_depth: req.body.max_depth,
     avg_depth: req.body.avg_depth,
-    notes: req.body.notes
+    notes: req.body.notes,
+    img_pubid: req.body.img_pubid
   });
 
   let newDiveId = await newDive.insertDive();

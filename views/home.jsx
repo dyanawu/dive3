@@ -9,7 +9,11 @@ class Home extends AuthContent {
 
   showContent() {
     return (
-      <p>Welcome to my dive log!</p>
+      <div className="row">
+        <div className="col text-center">
+          <p className="h4">Welcome to my dive log!</p>
+        </div>
+      </div>
     );
   }
 }

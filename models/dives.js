@@ -3,7 +3,8 @@
 const dbPool = require('../db.js');
 
 module.exports = class Dive {
-  constructor ({trip_id, dive_no, site, time_in, time_out, max_depth, avg_depth, notes}) {
+  constructor ({trip_id, dive_no, site, time_in, time_out,
+                max_depth, avg_depth, notes, img_pubid}) {
     this.trip_id = trip_id;
     this.dive_no = dive_no;
     this.site = site;
@@ -12,6 +13,7 @@ module.exports = class Dive {
     this.max_depth = max_depth;
     this.avg_depth = avg_depth;
     this.notes = notes;
+    this.img_pubid = img_pubid;
   }
 
   static async getAllDives() {
@@ -58,9 +60,9 @@ module.exports = class Dive {
     let query =
         'INSERT INTO dives ' +
         '(trip_id, dive_no, site, ' +
-        'time_in, time_out, max_depth, avg_depth, notes) ' +
+        'time_in, time_out, max_depth, avg_depth, notes, img_pubid) ' +
         'VALUES ' +
-        '($1, $2, $3, $4, $5, $6, $7, $8) ' +
+        '($1, $2, $3, $4, $5, $6, $7, $8, $9) ' +
         'RETURNING id';
     let values = [
       this.trip_id,
@@ -70,7 +72,8 @@ module.exports = class Dive {
       this.time_out,
       this.max_depth,
       this.avg_depth,
-      this.notes
+      this.notes,
+      this.img_pubid
     ];
 
     return await dbPool.query(query, values);

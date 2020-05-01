@@ -129,11 +129,25 @@ class DiveForm extends AuthContent {
 
                 <div className="form-row">
                   <div className="form-group col">
+                    <button id="upload_widget"
+                            className="btn btn-block btn-info">Upload image</button>
+
+                    <script src="https://widget.cloudinary.com/v2.0/global/all.js"
+                            type="text/javascript"></script>
+
+                    <script type="text/javascript" src="/script/cloud.js"></script>
+                    <input type="hidden" id="cloudimageid" name="img_pubid" />
+                  </div>
+                </div>
+
+                <div className="form-row">
+                  <div className="form-group col">
                     <input type="submit"
                            className="btn btn-block btn-info"
                     />
                   </div>
                 </div>
+
               </form>
 
             </div>

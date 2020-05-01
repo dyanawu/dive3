@@ -36,5 +36,6 @@ CREATE TABLE dives (
   time_out TIMESTAMPTZ,
   max_depth REAL NOT NULL DEFAULT 0.0,
   avg_depth REAL NOT NULL DEFAULT 0.0,
-  notes VARCHAR(2000)
+  notes VARCHAR(2000),
+  img_pubid VARCHAR(50)
 );

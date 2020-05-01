@@ -37,5 +37,5 @@ CREATE TABLE dives (
   max_depth REAL NOT NULL DEFAULT 0.0,
   avg_depth REAL NOT NULL DEFAULT 0.0,
   notes VARCHAR(2000),
-  img_pubid VARCHAR(50)
+  img_pubid VARCHAR(50) NOT NULL DEFAULT ''
 );

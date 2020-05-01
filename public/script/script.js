@@ -1,10 +1,10 @@
 // SmartPhone is found in detect-browser.js
 window.addEventListener('DOMContentLoaded', (e) => {
   if (SmartPhone.isAny()) {
-    console.log("here");
-    let ele = document.querySelector(".resizethis");
-    ele.style.maxHeight = "65vh";
-  } else {
-    console.log("nothing to do, not mobile");
+    let resizeEle = document.querySelector(".resizethis");
+    resizeEle.style.maxHeight = "65vh";
+
+    let borderEle = document.querySelector(".unborderthis");
+    borderEle.classList.remove("border-right");
   }
 });

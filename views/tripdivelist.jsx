@@ -8,6 +8,7 @@ class TripDiveList extends AuthContent {
   }
 
   showContent() {
+    let newDiveLink = `${this.props.tripid}/dive/new`;
     let dives = this.props.dives;
     const dateOpts = {
       day: 'numeric',
@@ -49,9 +50,9 @@ class TripDiveList extends AuthContent {
       <>
         <div className="row">
           <div className="col">
-            <a href="/dive/new/"
+            <a href={newDiveLink}
                className="btn btn-outline-info btn-block">
-              <span className="h5">Add New Dive</span>
+              <span className="h5">Add New Dive to This Trip</span>
             </a>
           </div>
         </div>

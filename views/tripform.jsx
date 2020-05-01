@@ -69,6 +69,7 @@ class TripForm extends AuthContent {
                       {countries}
                     </datalist>
                   </div>
+
                   <div className="form-group col-6">
                     <label>Destination</label>
                     <input type="text"

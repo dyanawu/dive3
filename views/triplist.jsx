@@ -32,7 +32,7 @@ class TripList extends AuthContent {
 
     return (
       <>
-        <div className="row" key="button">
+        <div className="row mb-3" key="button">
           <div className="col">
             <a href="/trip/new/"
                className="btn btn-outline-info btn-block">
@@ -41,7 +41,7 @@ class TripList extends AuthContent {
           </div>
         </div>
 
-        <div className="resizethis row my-3"
+        <div className="resizethis row"
              style={{overflowY: "scroll", maxHeight: "82vh"}} key="table">
           <div className="col">
             <table className="table table-hover">

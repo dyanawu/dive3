@@ -15,9 +15,15 @@ router.get('/trip/new', Trips.showForm);
 
 router.post('/trip/new', Trips.addTrip);
 
-router.get('/trip/:id', Dives.listDivesByTrip);
+router.get('/trip/:tripid', Trips.listTripDives);
+
+router.get('/trip/:tripid/dive/new', Dives.showForm);
+
+//router.get('/trip/:id/edit', Trips.showForm);
 
 router.get('/dives', Dives.listDives);
+
+router.get('/dive/new', Dives.showForm);
 
 router.get('/login', (req, res) => {
   res.render('login');

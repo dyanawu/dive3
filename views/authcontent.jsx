@@ -11,11 +11,12 @@ class AuthContent extends Template {
     return (
       <div className="row flex-sm-grow-1">
 
-        <div className="col-sm-2 pt-3 bg-secondary">
+        <div className="unborderthis col-sm-3 col-md-2 pt-3 border-right border-info">
           <Nav />
         </div>
 
-        <div className="col-sm-10 pt-3">
+
+        <div className="col-sm-9 col-md-10 pt-3">
           {this.showContent()}
         </div>
 

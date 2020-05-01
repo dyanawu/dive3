@@ -136,7 +136,7 @@ class DiveForm extends AuthContent {
                             type="text/javascript"></script>
 
                     <script type="text/javascript" src="/script/cloud.js"></script>
-                    <input type="hidden" id="cloudimageid" name="img_pubid" />
+                    <input type="hidden" id="cloudimageid" name="img_pubid" defaultValue=""/>
                   </div>
                 </div>
 

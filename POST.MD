@@ -22,7 +22,40 @@ _I managed to have a relation that should be easy to extend and turned out to be
 
   For each, please include code examples.
   1. Code snippet up to 20 lines.
-  2. Code design documents or architecture drawings / diagrams
+
+``` javascript
+// models/trips.js
+const Trip = require('../models/trips');
+const Country = require('../models/countries');
+const Destination = require('../models/destinations');
+const Operator = require('../models/operators');
+const Dives = require('../models/dives');
+
+const listTripDives = async (req, res) => {
+  let tripName = await Trip.getTripName(req.params.tripid);
+  let results = await Dives.getDivesByTrip(req.params.tripid);
+  res.locals.tripid = req.params.tripid;
+  res.locals.dives = results.rows;
+  res.locals.tripname = tripName;
+  res.render('tripdivelist');
+};
+
+const showForm = async (req, res) => {
+  const results = await Promise.all([
+      Country.getAll(),
+      Destination.getAll(),
+      Operator.getAll()
+  ]);
+
+  res.locals.countries = results[0].rows;
+  res.locals.destinations = results[1].rows;
+  res.locals.operators = results[2].rows;
+
+  res.render('tripform');
+};
+```
+
+2. Code design documents or architecture drawings / diagrams
      - _refer [ERD](https://github.com/dyanawu/sei-proj-dive3/blob/master/docs/dive3_erd.jpg)_
 
 ## WDI Unit 2 Post Mortem

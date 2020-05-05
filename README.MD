@@ -10,7 +10,7 @@
 6. Cloudinary API
 
 ## Approach
-I started with a basic idea of wanting to show the dives in a format somewhat different from a physical dive book, and eventually settled on the trips/dives hierarchy, plus the idea of laying out dives as cards. The relational diagram and basic wireframe are below.
+I started with a basic idea of wanting to show my dives in a format somewhat different from a physical dive book, and eventually settled on the trips/dives hierarchy, plus the idea of laying out dives as cards. The relational diagram and basic wireframe are below.
 
 ### User stories
 ``` text
@@ -41,6 +41,8 @@ so that
 Access online at http://dive3.herokuapp.com/
 
 ## Unsolved / Future Features
+As a dive blog template concept, I intend to add a basic single-user authentication so that anyone can view dives, but only the logged-in user can add trips and dives.
+
 I'd have liked to add something along the lines of statistic visualisations for dives, as well as a feature (suggested by a dive buddy) of allowing buddies or divemasters to sign dives off digitally.
 
 ## Credits

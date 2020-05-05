@@ -23,15 +23,16 @@ class TripDiveList extends AuthContent {
 
     let diveCards = dives.map(dive => {
       dive.notes = dive.notes || "No notes taken.";
+      let key = `key-${dive.id}`;
       let img;
       if (dive.img_pubid !== '') {
         let img_url = `https://res.cloudinary.com/dyanawu/image/upload/${dive.img_pubid}`;
-        img = <img src={img_url} class="card-img-top" alt="a photo from this dive" />;
+        img = <img src={img_url} className="card-img-top" alt="a photo from this dive" />;
       } else {
         img = "";
       }
       return (
-        <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-3 px-1">
+        <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-3 px-1" key={key}>
           <div className="card border-info text-monospace">
             {img}
             <div className="card-header text-white bg-info d-flex justify-content-around align-content-center">

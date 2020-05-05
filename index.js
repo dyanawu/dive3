@@ -6,9 +6,6 @@ const app = express();
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
-const cookieParser = require('cookie-parser');
-app.use(cookieParser());
-
 app.use(express.json());
 app.use(express.urlencoded({
   extended: true
